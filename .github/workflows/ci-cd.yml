@@ -32,11 +32,11 @@ jobs:
       - name: Build the site
         run: pelican content -o output -s publishconf.py \
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Upload site output
+        uses: actions/upload-artifact@v3
         with:
           name: site-output
-          path: output 
+          path: output/
           
 
   deploy:
