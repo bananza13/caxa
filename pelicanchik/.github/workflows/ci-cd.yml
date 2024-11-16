@@ -3,13 +3,12 @@ name: CI/CD for Pelican Site
 on:
   push:
     branches:
-      - main  # Запуск только при пуше в ветку main
+      - main  
   pull_request:
     branches:
-      - main  # Проверка изменений при pull request
+      - main  
 
 jobs:
-  # Проверка кода и сборка сайта
   build:
     runs-on: ubuntu-22.04
 
@@ -20,28 +19,28 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5.3.0
         with:
-          python-version: '3.11.4'  # Версия Python
+          python-version: '3.11.4'
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pelican markdown pytest  # Установка зависимостей
+          pip install pelican markdown pytest
 
       - name: Run tests
-        run: pytest tests/  # Запуск тестов
+        run: pytest tests/ 
 
       - name: Build the site
-        run: pelican content -o output -s publishconf.py  # Сборка сайта
+        run: pelican content -o output -s publishconf.py \
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: site-output
-          path: output  # Сохранение результата сборки для использования в других шагах
+          path: output 
+          
 
-  # Публикация на GitHub Pages
   deploy:
-    needs: build  # Зависимость от предыдущей задачи
+    needs: build  
     runs-on: ubuntu-22.04
 
     steps:
@@ -51,10 +50,10 @@ jobs:
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
-          name: site-output  # Получение артефакта с результатами сборки
+          name: site-output 
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Токен для доступа к GitHub Pages
-          publish_dir: output  # Каталог с собранным сайтом
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: output  
