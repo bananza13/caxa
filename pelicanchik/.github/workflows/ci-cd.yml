@@ -34,7 +34,7 @@ jobs:
         run: pelican content -o output -s publishconf.py  # Сборка сайта
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: site-output
           path: output  # Сохранение результата сборки для использования в других шагах
