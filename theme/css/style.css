@@ -3,7 +3,7 @@
 /* *** General Styles *** */
 
 body  {
-	background: url(https://github.com/bananza13/caxa/blob/2975c5fac1e5346cc946f4b3852e3f848a50d2ad/theme/images/background.jpg);
+	background: url(theme/images/background.jpg);
 	color: #293331;
 	font: 13px Georgia, "Times New Roman", Times, serif;
 	text-align: center;
