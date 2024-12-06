@@ -58,7 +58,7 @@ ol {
 } 
 
 #header { 
-	background: url(theme/images/header.gif) no-repeat;
+	background-image: url(theme/images/header.gif) no-repeat;
 	height: 109px;
 	padding: 0 10px 0 20px;
 } 
