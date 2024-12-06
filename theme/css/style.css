@@ -3,7 +3,7 @@
 /* *** General Styles *** */
 
 body  {
-	background: url(../theme/images/background.jpg);
+	background: url(theme/images/background.jpg);
 	color: #293331;
 	font: 13px Georgia, "Times New Roman", Times, serif;
 	text-align: center;
@@ -58,7 +58,7 @@ ol {
 } 
 
 #header { 
-	background: url('theme/images/header.gif') no-repeat;
+	background: url(theme/images/header.gif) no-repeat;
 	height: 109px;
 	padding: 0 10px 0 20px;
 } 
