@@ -2,7 +2,7 @@ AUTHOR = 'Aleksandr Osipov'
 SITENAME = 'Hello World'
 SITEURL = ""
 
-THEME = 'theme'
+THEME = 'pelicanchik/themes/waterspill'
 
 PATH = "content"
 
