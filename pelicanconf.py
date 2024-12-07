@@ -2,9 +2,9 @@ AUTHOR = 'Aleksandr Osipov'
 SITENAME = 'Hello World'
 SITEURL = ""
 
-THEME = 'themes/waterspill'
+THEME = 'theme'
 
-PATH = "content/text.md"
+PATH = "content"
 
 TIMEZONE = 'Europe/Rome'
 
