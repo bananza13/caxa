@@ -1,3 +1,3 @@
-Это мой сайт Пеликан
+Hello my friends!
 Date: 16-11-2024 
 Author: Aleksandr Osipov 
