@@ -4,7 +4,7 @@ SITEURL = ""
 
 THEME = 'themes/waterspill'
 
-PATH = "content"
+PATH = "content/text.md"
 
 TIMEZONE = 'Europe/Rome'
 
